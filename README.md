@@ -1,5 +1,12 @@
-# RedditAngularFirebase
+# RedditAngular Authentication Firebase
 
+![](./src/assets/redditt2.png)
+![](./src/assets/redditt1.png)
+![](./src/assets/redditt3.png)
+![](./src/assets/redditt4.png)
+![](./src/assets/redditt5.png)
+![](./src/assets/redditt6.png)
+## scss export and import Files
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
 
 ## Development server

@@ -1,0 +1,37 @@
+@mixin btn($background, $color) {
+  background-color: $background;
+  color: $color;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+@mixin btn-social-media($background, $color) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background-color: $background;
+  color: $color;
+  border: 1px solid $color-gray-light;
+  border-radius: 15px;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  font-size: 1rem;
+  position: relative;
+  img{
+    position: absolute;
+    left: 10px;
+  }
+}
+:export {
+  // export the mixin
+  btn: btn;
+  btn-social-media: btn-social-media;
+}

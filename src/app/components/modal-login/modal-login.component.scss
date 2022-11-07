@@ -1,0 +1,37 @@
+@import 'src/app/app.component.scss';
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    &-login{
+        width: 25%;
+        height: auto;
+        background-color: #fff;
+        color: #222;
+        border-radius: 5px;
+        padding: 60px 50px;
+        position: relative;
+        p{
+            font-size: 13px;
+            font-weight: 300;
+            margin-top: 20px;
+            a{
+                color: $color-blue;
+            }
+        }
+        button{
+            width: 100%;
+            margin-top: 15px;
+            @include btn-social-media($color-white, #222);
+        }
+    }
+    
+}

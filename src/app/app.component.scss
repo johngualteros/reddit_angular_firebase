@@ -1,0 +1,8 @@
+// This component includes all IMPORTS and export declarations for the app.
+@import 'src/styles';
+@import 'src/app/scss/mixins';
+
+:export {
+    @import 'src/styles';
+    @import 'src/app/scss/mixins';
+}

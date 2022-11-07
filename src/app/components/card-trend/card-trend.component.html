@@ -1,0 +1,8 @@
+<div class="container container-loading" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url({{trend.image}})">
+    <h4 class="loading">{{ trend.title }}</h4>
+    <p class="loading">{{ trend.description.slice(0, 50) }}...</p>
+    <div class="container-user loading">
+        <img [src]="trend.user[0].image" [alt]="trend.user[0].name" width="15">
+        <p class="name-user">r/{{ trend.user[0].name }}</p>
+    </div>
+</div>

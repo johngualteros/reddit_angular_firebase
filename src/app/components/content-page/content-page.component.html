@@ -1,0 +1,49 @@
+<div class="container">
+  <app-alert-message></app-alert-message>
+  <h5>En tendencia Hoy</h5>
+  <div class="container-cards-trends">
+    <app-card-trend
+      *ngFor="let trend of trends.slice(0, 4)"
+      [trend]="trend"
+    ></app-card-trend>
+  </div>
+  <h5>Publicaciones más recientes</h5>
+  <div class="container-posts">
+    <div class="container-post container-loading">
+        <div class="container-post-votes">
+            <i class="bi bi-arrow-up"></i>
+            <p class="loading">0</p>
+            <i class="bi bi-arrow-down"></i>
+        </div>
+        <div class="content-post">
+            <div class="content-post-header">
+                <img src="https://preview.redd.it/rrz3hmsxcll71.png?auto=webp&s=59f9f6ae2b212be39fc4f3e17fcabc873c287858" width="50" alt="">
+                <p class="loading">r/JohnGualteros <span class="details-post">Publicado por John Gualteros hace 20 minutos</span></p>
+            </div>
+            <div class="content-post-body">
+                <h3 class="loading">What is the best languages</h3>
+                <img src="https://i.redd.it/7z8n9x5wssf91.jpg" alt="">
+            </div>
+            <div class="content-post-actions">
+                <p class="loading"><i class="bi bi-chat-left"></i> Comments</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-user" *ngIf="currentUser??null">
+      <div class="container-user-banner container-loading">
+        <img
+          src="https://preview.redd.it/rrz3hmsxcll71.png?auto=webp&s=59f9f6ae2b212be39fc4f3e17fcabc873c287858"
+          alt="Avatar"
+          width="100"
+        />
+      </div>
+      <div class="container-user-info container-loading">
+        <h1 class="loading">{{ currentUser.displayName }}</h1>
+        <h3 class="loading">r/{{ currentUser.displayName.trim() }}</h3>
+        <h5 class="loading">Total Post Created: 1</h5>
+        <button class="btn-create-post" (click)="openForm()">Create Post</button>
+        <button class="btn-logout" (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+</div>

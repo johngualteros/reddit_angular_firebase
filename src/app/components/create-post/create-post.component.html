@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="container-post-form">
+    <div class="container-close" (click)="closeForm()"><i class="bi bi-x-lg"></i></div>
+    <h2>Create a new Post</h2>
+    <form (ngSubmit)="createPost()">
+      <label for="title">Title</label>
+      <input type="text" id="title" [(ngModel)]="post.title")/>
+      <label for="content">Content</label>
+      <textarea id="content" rows="3" [(ngModel)]="post.content"></textarea> 
+
+      <label class="custom-file-upload">
+        <input
+          type="file"
+          id="image"
+          formControlName="image"
+          accept="image/*"
+          [(ngModel)]="post.image"
+        />
+        <span class="image-button">Select Image</span>
+      </label>
+      <button type="submit" class="btn btn-primary">Create Post</button>
+    </form>
+  </div>
+</div>
